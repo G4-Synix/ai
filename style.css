@@ -1,0 +1,175 @@
+.big-text{font-size: 100px; font-weight: 900; color:#70F4FF; font-family: 'Bebas Neue', cursive;;}
+.med-text{font-size: 30px; color: #fff; font-family: 'Mukta', sans-serif; translate: 0 -50px; margin-right: 1000px;}
+.normal-text{font-size: 100px; font-weight: 900; color:#70F4FF; font-family: 'Bebas Neue', cursive;;}
+.small-text{font-size: 20px; color: #fff; margin-right: 1000px; font-family: 'Mukta', sans-serif;}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+/*BACKGROUND ANIMATO TIPO FIVEM*/
+
+/* ! Hero */
+.hero{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: url('robot2') no-repeat center center;
+  background-size: 1600px;
+  
+}
+.hero__content{
+  translate: 40px;
+}
+.tha {
+  display: inline-block;
+  position: relative;
+  font-size: 25px; color: #7700ff; font-family: 'Mukta', sans-serif; translate: 0 -50px;
+}
+
+.tha:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7700ff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.tha:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*SITO DI 2AINF NON COPIARE*/
+model-viewer {
+  width: 100%;
+  height: 100vh;
+  right: -1150px;
+  top: -1231px;
+}
+/*=== Specs Section ===*/ 
+.specs{
+  background: url(audiinfo.jpeg)no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+.specs-header, specs ul{
+  position: relative;
+  z-index: 1;
+}
+.specs ul{
+  width: 40em;
+  margin-top: 3em;
+}
+.specs li{
+  padding: 0.6em 0;
+  border-bottom: #555 1px solid;
+}
+.spec ul:li:span{
+  color: #fff;
+}
+.specs li span:first-child{
+  color: #888;
+}
+/* Scritta Animata */ 
+.hero{
+  display: flex;
+}
+.hero .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.hero .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #70F4FF;
+  font-size: 60px;
+  font-weight: 500;/*SITO DI 2AINF NON COPIARE*/
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  background: #000;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  border-left: 2px solid #70F4FF;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {/*SITO DI 2AINF NON COPIARE*/
+  100% {
+    left: 100%;
+    margin: 0 -70px 0 70px;
+  }
+}
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #70F4FF;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Segoe UI",Arial,sans-serif;
+  position: relative;
+  color: #fff;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  margin-left: 42px;
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;/*SITO DI 2AINF NON COPIARE*/
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.footer{font-size: 20px; color: #fff; margin-right: 1000px; font-family: 'Mukta', sans-serif;}
